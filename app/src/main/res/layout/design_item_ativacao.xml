@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_item_ativacao"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/llAtivacaoNumeroData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+        android:paddingBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoNumero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoNumero"
+            android:textColor="#FF4500"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoData"
+            android:textAlignment="textEnd"
+            android:textColor="#FF4500"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAtivacaoProcessoTransportadoraLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llAtivacaoNumeroData"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+        >
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoProcessoLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoProcessoLabel"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoTransportadoraLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoTransportadoraLabel"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAtivacaoProcessoTransportadora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llAtivacaoProcessoTransportadoraLabel"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+        android:paddingBottom="8dp"
+        >
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoProcesso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoProcesso"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoTransportadora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoTransportadora"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llAtivacaoOrigens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+        app:layout_constraintTop_toBottomOf="@id/llAtivacaoProcessoTransportadora"
+        >
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoOrigemTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoOrigemTitulo"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLviAtivacaoOrigemOrigemDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="5dp"
+            android:insetRight="5dp"
+            android:text="@string/design_item_ativacao_tvLviAtivacaoOrigemOrigemDesc"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@id/tvLviAtivacaoOrigemTitulo"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llAtivacaoBotoesGeral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+        app:layout_constraintTop_toBottomOf="@id/llAtivacaoOrigens"
+        android:baselineAligned="false">
+            <LinearLayout
+                android:id="@+id/llAtivacaoBotoesEsquerda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/shape_item_ativacao_backgroup"
+                >
+
+                <Button
+                    android:id="@+id/btnAtivacaoNotificacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:insetLeft="5dp"
+                    android:insetTop="5dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/design_item_ativacao_btnAtivacaoNotificacoes" />
+
+                <Button
+                    android:id="@+id/btnAtivacaoEventos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:insetLeft="5dp"
+                    android:insetTop="5dp"
+                    android:text="@string/design_item_ativacao_btnAtivacaoEventos" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAtivacaoBotoesDireita"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@drawable/shape_item_ativacao_backgroup"
+                >
+
+                <Button
+                    android:id="@+id/btnAtivacaoRegistroDanfe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:insetLeft="5dp"
+                    android:insetTop="5dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/design_item_ativacao_btnAtivacaoRegistroDanfe" />
+
+
+                <Button
+                    android:id="@+id/btnAtivacaoTipoViagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:insetLeft="5dp"
+                    android:insetTop="5dp"
+                    android:text="@string/design_item_ativacao_btnAtivacaoTipoViagem" />
+
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

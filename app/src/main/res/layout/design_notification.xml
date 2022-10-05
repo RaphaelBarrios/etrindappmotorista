@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivNotificationLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/imgnotificacao"></ImageView>
+
+        <TextView
+            android:id="@+id/tvNotificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/ivNotificationLogo"
+            android:text="@string/design_notification_tvNotificationTitle"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"></TextView>
+
+
+        <TextView
+            android:id="@+id/tvNotificationMensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNotificationTitle"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/ivNotificationLogo"
+            android:text="@string/design_notification_tvNotificationMensagem"
+            android:textColor="@color/black"
+            android:textSize="14sp"></TextView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

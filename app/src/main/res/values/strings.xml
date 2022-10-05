@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">E-TRIND AppMotorista</string>
+    <string name="notification_location_title">E-TRIND AppMotorista - Localização</string>
+    <string name="notification_location_body">Compartilhando, esta notificação ficará ativa</string>
+
+    <string name="entrar_permissao_localizacao_titulo">Sua Localização</string>
+    <string name="entrar_permissao_localizacao_desc">App Motorista Etrind coleta dados de localização
+        para permitir o rastreamento dos motoristas mesmo quando o aplicativo está fechado
+        ou não está em uso
+    </string>
+    <string name="entrar_permissao_localizacao_ok">Aceitar</string>
+    <string name="entrar_permissao_localizacao_cancel">Negar</string>
+
+    <string name="entrar_permissao_localizacao_negada_titulo">Permissão Localização Negada</string>
+    <string name="entrar_permissao_localizacao_negada_desc1">
+        Você negou a permissão de localização necessária para o funcionamento do app.
+        \n\nPor favor, conceda a permissão para continuar.
+    </string>
+    <string name="entrar_permissao_localizacao_negada_desc2">
+        \n\nCaso não seja solicitada novamente vá nas configurações do seu dispositivo e conceda as permissões necessárias
+        ou desinstale e instale o app novamente concedendo as permissões necessárias assim que solicitadas.
+    </string>
+    <string name="entrar_permissao_localizacao_negada_fechar">Entendi</string>
+    <string name="entrar_permissao_localizacao_negada_desc_detalhe_android_maior_9">
+        \n\nPermissão Localização: Permitir o tempo todo
+    </string>
+    <string name="entrar_permissao_localizacao_negada_desc_detalhe_android_menor_9">
+    </string>
+    <string name="texto_versao_label"> E-TRIND v %1$s</string>
+
+    <string name="excluir_danfe_confirmacao_titulo">Confirmação</string>
+    <string name="excluir_danfe_confirmacao_mensagem">Deseja realmente excluir a NF abaixo?</string>
+    <string name="excluir_danfe_confirmacao_texto_positivo">Sim</string>
+    <string name="excluir_danfe_confirmacao_texto_negativo">Não</string>
+
+    <string name="enviar_danfe_confirmacao_titulo">Confirmação</string>
+    <string name="enviar_danfe_confirmacao_mensagem">Confimar o envio das Notas Fiscais?</string>
+    <string name="enviar_danfe_confirmacao_texto_positivo">Sim</string>
+    <string name="enviar_danfe_confirmacao_texto_negativo">Não</string>
+    <string name="enviar_danfe_progressdialog_mensagem">Enviando...</string>
+    <string name="enviar_danfe_mensagem_sucesso">Notas fiscais enviadas com sucesso!</string>
+    <string name="enviar_danfe_mensagem_erro">Erro ao enviar notas fiscais!</string>
+
+
+    <!--Revisados-->
+    <string name="activity_ativacoes_titulo">Ativações</string>
+    <string name="activity_ativacoes_atual">ATUAL</string>
+    <string name="activity_ativacoes_proximas">PRÓXIMAS</string>
+
+    <string name="activity_danfe_titulo">NFe</string>
+    <string name="activity_danfe_subtitulo">ATIVAÇÃO N: 999999</string>
+    <string name="activity_danfe_descricao1">Realize a leitura dos códigos de barra das notas fiscais</string>
+    <string name="activity_danfe_btnScanDanfe">LER CÓDIGO DE BARRAS</string>
+    <string name="activity_danfe_btnEnviarDanfes">SALVAR</string>
+
+    <string name="activity_entrar_titulo">Entrar</string>
+    <string name="activity_entrar_txtEntrarCnh">CNH</string>
+    <string name="activity_entrar_btnEntrar">ENTRAR</string>
+
+    <string name="activity_eventos_titulo">Eventos</string>
+
+    <string name="activity_inicial_tvVersao">XXXX</string>
+    <string name="activity_inicial_btnEntrar">ENTRAR</string>
+    <string name="activity_inicial_btnRegistrarAbrir">REGISTRAR</string>
+    <string name="activity_inicial_tvPoliticaPrivacidade">
+        <a href="https://etrind.com.br/politica-de-privacidade-para-app-e-trind/">Política de Privacidade</a>
+    </string>
+
+    <string name="activity_notificacao_detalhe_tvNotifDetalheTitulo">Título</string>
+    <string name="activity_notificacao_detalhe_tvNotifDetalheMensagem">Mensagem</string>
+    <string name="activity_notificacao_detalhe_btnNotificDetalheFechar">FECHAR</string>
+
+    <string name="activity_notificacoes_titulo">Notificações</string>
+
+    <string name="activity_registrar_tvRegistrar">Registrar</string>
+    <string name="activity_registrar_txtCnh">CNH</string>
+    <string name="activity_registrar_txtTelefone">Telefone</string>
+    <string name="activity_registrar_btnRegistrar">PRÓXIMO</string>
+
+    <string name="activity_registrar_codigo_ativity_tvRegistrarCodigo">Registrar</string>
+    <string name="activity_registrar_codigo_ativity_txtCodigoSeguranca">Código de Segurança</string>
+    <string name="activity_registrar_codigo_ativity_btnRegistrarCodigo">ENVIAR</string>
+
+    <string name="activity_tipo_viagem_titulo">Tipo Viagem</string>
+
+
+    <string name="bottom_menu_menuitem_home">Home</string>
+    <string name="bottom_menu_menuitem_config">Config</string>
+    <string name="bottom_menu_menuitem_logout">Sair</string>
+
+    <string name="design_item_ativacao_tvLviAtivacaoNumero">N: 996702</string>
+    <string name="design_item_ativacao_tvLviAtivacaoData">30/10/2021 20:33</string>
+    <string name="design_item_ativacao_tvLviAtivacaoProcessoLabel">PROCESSO:</string>
+    <string name="design_item_ativacao_tvLviAtivacaoTransportadoraLabel">TRANSPORTADORA:</string>
+    <string name="design_item_ativacao_tvLviAtivacaoProcesso">MILK RUN</string>
+    <string name="design_item_ativacao_tvLviAtivacaoTransportadora">CARGOLIFT - MR VINHEDO</string>
+    <string name="design_item_ativacao_tvLviAtivacaoOrigemTitulo">ORIGEM (COLETAS)</string>
+    <string name="design_item_ativacao_tvLviAtivacaoOrigemOrigemDesc">PROGERAL (10:00)</string>
+    <string name="design_item_ativacao_btnAtivacaoNotificacoes">NOTIFICAÇÕES</string>
+    <string name="design_item_ativacao_btnAtivacaoEventos">EVENTOS</string>
+    <string name="design_item_ativacao_btnAtivacaoRegistroDanfe">REGISTRO DANFE</string>
+    <string name="design_item_ativacao_btnAtivacaoTipoViagem">TIPO VIAGEM</string>
+
+    <string name="design_item_danfe_tvLviDanfeNumero">35210921660838013836550010010121521599604536</string>
+    <string name="design_item_danfe_btnLviDanfeExcluir">EXCLUIR</string>
+
+    <string name="design_notification_tvNotificationTitle">Título</string>
+    <string name="design_notification_tvNotificationMensagem">Mensagem</string>
+
+    <string name="fragment_ativacoes_tvFragmentAtivacoes">Ativações</string>
+    <string name="fragment_ativacoes_tvFragmentAtivacoesAtualLabel">ATUAL</string>
+    <string name="fragment_ativacoes_tvFragmentAtivacoesProximasLabel">PRÓXIMAS</string>
+
+    <string name="AtivacoesActivity_tvLviAtivacaoNumero">"N°: %1$d</string>
+    <string name="AtivacoesFragment_tvFragmentAtivacoes">Ativações (%1$s)</string>
+
+    <string name="DanfeActivity_tvDanfeAtivacaoNumero">Ativação N°: %1$d</string>
+
+    <string name="DesignItemAtivacaoAdapter_tvLviAtivacaoNumero">N°: %1$d</string>
+
+    <string name="HomeFragment_tvHomeCnh">Motorista: %1$s \nCNH: %2$s</string>
+
+    <string name="fragment_configuracoes_tvFragmentConfiguracoes">Configurações</string>
+
+    <string name="activity_registrar_telefone_naoinformado">Favor informar o número do telefone celular</string>
+    <string name="activity_registrar_telefone_invalido">Telefone inválido, favor informar número com DDD</string>
+
+    <string name="activity_registrar_codigosegurancao_naoinformado">Favor informar o código de segurança recebido via SMS</string>
+    <string name="activity_registrar_codigosegurancao_invalido">Código de segurança inválido. Favor informar o código de segurança recebido via SMS</string>
+</resources>

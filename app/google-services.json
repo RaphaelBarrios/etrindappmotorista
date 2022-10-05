@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010118951035",
+    "project_id": "fcmetrindappmotorista",
+    "storage_bucket": "fcmetrindappmotorista.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010118951035:android:52b82cc05ad506d9bfa2de",
+        "android_client_info": {
+          "package_name": "br.com.etrind.etrindappmotorista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010118951035-14jcaei80okoh32jlfi5qoh9ik5e0aoo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe9fR1nZU1WYKgYDEynko9xGaS8R0r1vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010118951035-14jcaei80okoh32jlfi5qoh9ik5e0aoo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

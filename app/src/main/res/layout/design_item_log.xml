@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_item_ativacao"
+        android:padding="5dp"
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:id="@+id/llLviLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_item_ativacao_backgroup"
+
+        >
+
+        <TextView
+            android:id="@+id/tvLviDataHora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="4dp"
+            android:insetRight="4dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="2022-03-16 10:27:01.000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLviDescricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:background="@drawable/shape_item_ativacao_backgroup"
+            android:insetLeft="4dp"
+            android:insetRight="4dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Descricao"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

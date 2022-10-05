@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/agenda/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/agenda/app/src/main/res/layout/activity_schedule.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/ic_home.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/ic_person.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/shape_item_ativacao.xml" value="0.1046875" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/shape_item_ativacao_backgroup.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/shape_listviewitem_ativacao.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/shape_listviewitem_ativacao_textview.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/drawable/shape_tem_ativacao.xml" value="0.2203125" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_ativacoes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_danfe.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_entrar.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_eventos.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_inicial.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_localizacao.xml" value="0.15217391304347827" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_localizacao_job_scheduler.xml" value="0.11770833333333333" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_localizacao_service.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_localizacao_start_stop.xml" value="0.25" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_logout.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_main2.xml" value="0.15217391304347827" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_notificacao_detalhe.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_notificacoes.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_registrar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_registrar_codigo_ativity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/activity_tipo_viagem.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/design_item_ativacao.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/design_notification.xml" value="0.29096477794793263" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/fragment_ativacoes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/fragment_logout.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/layout/listviewitem_ativacao.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/appMotorista/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.10260416666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_ativacoes.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_danfe.xml" value="0.2" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_entrar.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_eventos.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_inicial.xml" value="0.18" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_notificacao_detalhe.xml" value="0.2" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_notificacoes.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_registrar.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_registrar_codigo_ativity.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/activity_tipo_viagem.xml" value="0.1" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/design_item_ativacao.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/design_item_danfe.xml" value="0.67" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/design_item_log.xml" value="0.33" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/design_item_notificacao.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/design_notification.xml" value="0.15267175572519084" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/fragment_ativacoes.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/fragment_configuracoes.xml" value="0.22" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/raphael.barrios/AndroidStudioProjects/etrindAppMotorista/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
