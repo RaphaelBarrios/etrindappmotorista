@@ -34,6 +34,7 @@ import br.com.etrind.etrindappmotorista.Business.AtivacaoBusiness;
 import br.com.etrind.etrindappmotorista.Business.DistanceMatrixBusiness;
 import br.com.etrind.etrindappmotorista.Business.LocalizacaoBusiness;
 import br.com.etrind.etrindappmotorista.Business.LogBusiness;
+import br.com.etrind.etrindappmotorista.Business.TempoEtaBusiness;
 import br.com.etrind.etrindappmotorista.Entity.AtivacaoEntity;
 import br.com.etrind.etrindappmotorista.Entity.LocalizacaoEntity;
 import br.com.etrind.etrindappmotorista.Entity.Result.DistMatrix.DistanceMatrixResult;
@@ -51,6 +52,8 @@ public class LocationService extends Service {
     private String authToken;
     private AtivacaoEntity ativacaoAtualEntity;
     private AtivacaoBusiness ativacaoBusiness;
+    private TempoEtaBusiness tempoEtaBusiness;
+
     private UserInfo userInfo;
 
     private LocationCallback locationCallback = new LocationCallback() {
@@ -85,6 +88,7 @@ public class LocationService extends Service {
         localizacaoBusiness = new LocalizacaoBusiness(this.authToken);
         distanceMatrixBusiness = new DistanceMatrixBusiness();
         logBusiness = new LogBusiness(getApplicationContext());
+        tempoEtaBusiness = new TempoEtaBusiness(this.authToken);
         ativacaoBusiness = new AtivacaoBusiness(this.authToken);
 
         NotificationManager notificationManager =
@@ -207,14 +211,18 @@ public class LocationService extends Service {
             if(this.ativacaoAtualEntity == null){
                 logDescricao = "Tempo estimado não calculado, motorista sem ativação em andamento";
             }else{
-                GenericResult result = distanceMatrixBusiness.Obter(localizacaoEntity, ativacaoAtualEntity);
-                if(!result.ResultOK){
-                    logDescricao = "Erro ao obter informação da Api Google Distance Matrix: " + result.Message;
+                GenericResult resultDistanceMatrix = distanceMatrixBusiness.Obter(localizacaoEntity, ativacaoAtualEntity);
+                if(!resultDistanceMatrix.ResultOK){
+                    logDescricao = "Erro ao obter informação da Api Google Distance Matrix: " + resultDistanceMatrix.Message;
                 }else{
-                    DistanceMatrixResult distanceMatrixResult = (DistanceMatrixResult)result.ResultData;
+                    DistanceMatrixResult distanceMatrixResult = (DistanceMatrixResult)resultDistanceMatrix.ResultData;
+                    int tempoTotalMinutos = distanceMatrixResult.ObterTempoTotalMinutos();
+                    GenericResult resultEnviar = tempoEtaBusiness.Enviar(this.ativacaoAtualEntity.Numero, tempoTotalMinutos);
+
                     logDescricao = "Origem (Localização Atual) > lat: " + localizacaoEntity.Latitude + " long: " + localizacaoEntity.Longitude;
                     logDescricao += " Destino (Ativação Nº "+ ativacaoAtualEntity.Numero +") > lat: " + ativacaoAtualEntity.LongitudeDestino + " long: " + ativacaoAtualEntity.LongitudeDestino;
-                    logDescricao += " > Tempo Estimado Total > " + distanceMatrixResult.ObterTempoTotalMinutos() + " minutos";
+                    logDescricao += " > Tempo Estimado Total > " + tempoTotalMinutos+ " minutos. Resultado Atualização: " + resultEnviar.Message;
+
                 }
             }
 

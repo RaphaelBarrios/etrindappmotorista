@@ -10,6 +10,7 @@ public class Constantes {
     public static final String REMOTE_URL_ATUALIZAR_TOKEN = "UpdateToken";
     public static final String REMOTE_URL_ATIVACAO_LISTAR = "GetAtivacoes";
     public static final String REMOTE_URL_LOCALIZACAO_ENVIAR = "UpdateLocalizacao";
+    public static final String REMOTE_URL_TEMPO_ETA_ENVIAR = "GetAtualizarTempoEta";
     public static final String REMOTE_URL_LOCALIZACAO_LISTAR = "GetChavesNFe";
     public static final String REMOTE_URL_ATUALIZAR_DANFE = "PostChaveNFe";
     public static final String REMOTE_URL_NOTIFICACAO_LISTAR = "GetNotificacoes";
