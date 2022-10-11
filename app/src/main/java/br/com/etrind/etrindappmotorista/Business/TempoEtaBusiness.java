@@ -16,9 +16,9 @@ public class TempoEtaBusiness {
         this.authToken = authToken;
     }
 
-    public GenericResult Enviar(int numeroAtivacao, int tempoTotalMinutos){
+    public GenericResult Enviar(int numeroAtivacao, int distanciaTotalKm){
         GenericResult result = new GenericResult();
-        String url = Constantes.REMOTE_URL + Constantes.REMOTE_URL_TEMPO_ETA_ENVIAR + "?NumeroViagem=" + numeroAtivacao + "&Eta=" + tempoTotalMinutos;
+        String url = Constantes.REMOTE_URL + Constantes.REMOTE_URL_TEMPO_ETA_ENVIAR + "?NumeroViagem=" + numeroAtivacao + "&DistanciaKm=" + distanciaTotalKm;
         HttpGet httpGet = new HttpGet();
 
         try {

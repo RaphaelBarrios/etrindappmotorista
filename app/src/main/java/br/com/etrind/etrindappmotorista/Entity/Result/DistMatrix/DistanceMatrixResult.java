@@ -24,6 +24,18 @@ public class DistanceMatrixResult {
         }
         return (tempoTotal / 60);
     }
+
+    public int ObterDistanciaTotalKm(){
+        if(this.Elements == null) return 0;
+
+        int distanciaTotal = 0;
+        for (DistanceMatrixElementResult element : this.Elements){
+            if(element.duration != null) {
+                distanciaTotal += element.distance.value;
+            }
+        }
+        return (distanciaTotal / 1000);
+    }
 }
 
 

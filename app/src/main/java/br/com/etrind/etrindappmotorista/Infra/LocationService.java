@@ -216,12 +216,12 @@ public class LocationService extends Service {
                     logDescricao = "Erro ao obter informação da Api Google Distance Matrix: " + resultDistanceMatrix.Message;
                 }else{
                     DistanceMatrixResult distanceMatrixResult = (DistanceMatrixResult)resultDistanceMatrix.ResultData;
-                    int tempoTotalMinutos = distanceMatrixResult.ObterTempoTotalMinutos();
-                    GenericResult resultEnviar = tempoEtaBusiness.Enviar(this.ativacaoAtualEntity.Numero, tempoTotalMinutos);
+                    int distanciaTotalKm = distanceMatrixResult.ObterDistanciaTotalKm();
+                    GenericResult resultEnviar = tempoEtaBusiness.Enviar(this.ativacaoAtualEntity.Numero, distanciaTotalKm);
 
                     logDescricao = "Origem (Localização Atual) > lat: " + localizacaoEntity.Latitude + " long: " + localizacaoEntity.Longitude;
-                    logDescricao += " Destino (Ativação Nº "+ ativacaoAtualEntity.Numero +") > lat: " + ativacaoAtualEntity.LongitudeDestino + " long: " + ativacaoAtualEntity.LongitudeDestino;
-                    logDescricao += " > Tempo Estimado Total > " + tempoTotalMinutos+ " minutos. Resultado Atualização: " + resultEnviar.Message;
+                    logDescricao += " Destino (Ativação Nº "+ ativacaoAtualEntity.Numero +") > lat: " + ativacaoAtualEntity.LatitudeDestino + " long: " + ativacaoAtualEntity.LongitudeDestino;
+                    logDescricao += " > Distância Total > " + distanciaTotalKm+ " Km. Resultado Atualização: " + resultEnviar.Message;
 
                 }
             }
