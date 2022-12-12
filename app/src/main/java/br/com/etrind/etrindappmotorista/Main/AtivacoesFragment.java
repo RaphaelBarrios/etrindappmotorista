@@ -41,7 +41,6 @@ public class AtivacoesFragment extends Fragment {
     public AtivacoesFragment(List<AtivacaoEntity> ativacoes, String cnh) {
         this.ativacoes = ativacoes;
         this.cnh = cnh;
-        final Handler handler = new Handler();
     }
 
     @Override
