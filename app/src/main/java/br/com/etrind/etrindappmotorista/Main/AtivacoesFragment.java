@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.etrind.etrindappmotorista.Business.AtivacaoBusiness;
 import br.com.etrind.etrindappmotorista.Entity.AtivacaoEntity;
+import br.com.etrind.etrindappmotorista.Entity.AtivacaoFiltroEntity;
+import br.com.etrind.etrindappmotorista.Entity.Result.GenericResult;
 import br.com.etrind.etrindappmotorista.Infra.UserInfo;
 import br.com.etrind.etrindappmotorista.Main.Design.DesignItemAtivacaoAdapter;
 import br.com.etrind.etrindappmotorista.R;
@@ -31,11 +35,13 @@ public class AtivacoesFragment extends Fragment {
     private View viewAtivacaoAtual;
     private final String cnh;
     private final List<AtivacaoEntity> ativacoes;
+    private AtivacaoBusiness ativacoesBusiness;
     UserInfo userInfo;
 
     public AtivacoesFragment(List<AtivacaoEntity> ativacoes, String cnh) {
         this.ativacoes = ativacoes;
         this.cnh = cnh;
+        final Handler handler = new Handler();
     }
 
     @Override
@@ -46,20 +52,47 @@ public class AtivacoesFragment extends Fragment {
 
         ctx =  getActivity();
         userInfo = new UserInfo(ctx);
+        ativacoesBusiness = new AtivacaoBusiness(userInfo.authTokenGet());
         lvAtivacoes = view.findViewById(R.id.lvFragmentAtivacoes);
         llAtivacaoAtual = view.findViewById(R.id.llFragmentAtivacaoAtual);
         TextView tvFragmentAtivacoes = view.findViewById(R.id.tvFragmentAtivacoes);
         tvFragmentAtivacoes.setText(String.format(ctx.getString(R.string.AtivacoesFragment_tvFragmentAtivacoes), this.cnh));
 
-        CarregarAtivacaoAtual();
-        CarregarAtivacoesProximas();
+        CarregarAtivacaoAtual(this.ativacoes);
+        CarregarAtivacoesProximas(this.ativacoes);
+
+        final Handler handler = new Handler();
+
+        Runnable refresh = new Runnable() {
+            @Override
+            public void run() {
+                AtualizarAtivacoes();;
+                handler.postDelayed(this, 60 * 1000);
+            }
+        };
+
+        handler.postDelayed(refresh, 10 * 1000);
 
         return view;
 
     }
 
-    protected  void CarregarAtivacaoAtual(){
-        AtivacaoEntity ativacaoAtual = ObterAtivacaoAtual();
+    public void AtualizarAtivacoes(){
+        AtivacaoFiltroEntity ativacaoFiltroEntity = new AtivacaoFiltroEntity(userInfo.idMotoristaGet());
+        GenericResult result = ativacoesBusiness.Listar(ativacaoFiltroEntity);
+        ArrayList<AtivacaoEntity> ativacoes = new ArrayList<>();
+        if(result.ResultOK){
+            ativacoes = (ArrayList<AtivacaoEntity>)result.ResultData;
+        }else{
+            Toast.makeText(ctx, result.Message, Toast.LENGTH_LONG).show();
+        }
+        CarregarAtivacaoAtual(ativacoes);
+        CarregarAtivacoesProximas((ativacoes));
+    }
+
+    protected  void CarregarAtivacaoAtual(List<AtivacaoEntity> ativacoes){
+        llAtivacaoAtual.removeAllViews();
+        AtivacaoEntity ativacaoAtual = ObterAtivacaoAtual(ativacoes);
 
         if(ativacaoAtual != null) {
             LayoutInflater inflater =(LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -69,8 +102,9 @@ public class AtivacoesFragment extends Fragment {
         }
     }
 
-    protected  void CarregarAtivacoesProximas(){
-        ArrayList<AtivacaoEntity>  itens = ObterProximasAtivacoes();
+    protected  void CarregarAtivacoesProximas(List<AtivacaoEntity> ativacoes){
+        lvAtivacoes.setAdapter(null);
+        ArrayList<AtivacaoEntity>  itens = ObterProximasAtivacoes(ativacoes);
         if(itens != null && itens.size() > 0){
             DesignItemAtivacaoAdapter designItemAtivacaoAdapter = new DesignItemAtivacaoAdapter(ctx, itens);
             lvAtivacoes.setAdapter(designItemAtivacaoAdapter);
@@ -143,8 +177,8 @@ public class AtivacoesFragment extends Fragment {
         });
     }
 
-    protected AtivacaoEntity ObterAtivacaoAtual(){
-        for(AtivacaoEntity ativacaoEntity : this.ativacoes){
+    protected AtivacaoEntity ObterAtivacaoAtual(List<AtivacaoEntity> ativacoes){
+        for(AtivacaoEntity ativacaoEntity : ativacoes){
             if(ativacaoEntity.ViagemEmAndamento.equals(true)){
                 userInfo.tempoAttEtaSet(ativacaoEntity.TempoAttEta);
                 return ativacaoEntity;
@@ -153,7 +187,7 @@ public class AtivacoesFragment extends Fragment {
         return null;
     }
 
-    protected ArrayList<AtivacaoEntity> ObterProximasAtivacoes(){
+    protected ArrayList<AtivacaoEntity> ObterProximasAtivacoes(List<AtivacaoEntity> ativacoes){
         ArrayList<AtivacaoEntity> proximasAtivacoes = new ArrayList<>();
 
         for(AtivacaoEntity ativacaoEntity : this.ativacoes){
