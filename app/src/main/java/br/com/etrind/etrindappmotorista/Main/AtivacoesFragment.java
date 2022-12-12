@@ -66,7 +66,7 @@ public class AtivacoesFragment extends Fragment {
             @Override
             public void run() {
                 AtualizarAtivacoes();;
-                handler.postDelayed(this, 60 * 1000);
+                handler.postDelayed(this, 10 * 1000);
             }
         };
 
