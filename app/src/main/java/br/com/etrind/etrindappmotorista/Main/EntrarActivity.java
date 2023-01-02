@@ -9,6 +9,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -144,7 +145,6 @@ public class EntrarActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), LocationService.class);
             intent.putExtra("idMotorista", userInfo.idMotoristaGet());
             intent.putExtra("authToken", userInfo.authTokenGet());
-
 
             intent.setAction(Constantes.ACTION_START_LOCATION_SERVICE);
             startService(intent);

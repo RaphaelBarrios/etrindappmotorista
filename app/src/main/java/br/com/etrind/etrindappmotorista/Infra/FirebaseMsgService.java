@@ -63,7 +63,7 @@ public class FirebaseMsgService extends FirebaseMessagingService {
                 getApplicationContext(),
                 1,
                 resultIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT
+                PendingIntent.FLAG_IMMUTABLE
         );
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(

@@ -36,11 +36,13 @@ public class AtivacoesFragment extends Fragment {
     private final String cnh;
     private final List<AtivacaoEntity> ativacoes;
     private AtivacaoBusiness ativacoesBusiness;
+    private final Handler handler;
     UserInfo userInfo;
 
     public AtivacoesFragment(List<AtivacaoEntity> ativacoes, String cnh) {
         this.ativacoes = ativacoes;
         this.cnh = cnh;
+        this.handler = new Handler();
     }
 
     @Override
@@ -59,8 +61,6 @@ public class AtivacoesFragment extends Fragment {
 
         CarregarAtivacaoAtual(this.ativacoes);
         CarregarAtivacoesProximas(this.ativacoes);
-
-        final Handler handler = new Handler();
 
         Runnable refresh = new Runnable() {
             @Override
@@ -103,9 +103,9 @@ public class AtivacoesFragment extends Fragment {
 
     protected  void CarregarAtivacoesProximas(List<AtivacaoEntity> ativacoes){
         lvAtivacoes.setAdapter(null);
-        ArrayList<AtivacaoEntity>  itens = ObterProximasAtivacoes(ativacoes);
-        if(itens != null && itens.size() > 0){
-            DesignItemAtivacaoAdapter designItemAtivacaoAdapter = new DesignItemAtivacaoAdapter(ctx, itens);
+        ArrayList<AtivacaoEntity>  proximasAtivacoes = ObterProximasAtivacoes(ativacoes);
+        if(proximasAtivacoes != null && proximasAtivacoes.size() > 0){
+            DesignItemAtivacaoAdapter designItemAtivacaoAdapter = new DesignItemAtivacaoAdapter(ctx, proximasAtivacoes);
             lvAtivacoes.setAdapter(designItemAtivacaoAdapter);
         }
     }
@@ -189,7 +189,7 @@ public class AtivacoesFragment extends Fragment {
     protected ArrayList<AtivacaoEntity> ObterProximasAtivacoes(List<AtivacaoEntity> ativacoes){
         ArrayList<AtivacaoEntity> proximasAtivacoes = new ArrayList<>();
 
-        for(AtivacaoEntity ativacaoEntity : this.ativacoes){
+        for(AtivacaoEntity ativacaoEntity : ativacoes){
             if(!ativacaoEntity.ViagemEmAndamento.equals(true)){
                 proximasAtivacoes.add(ativacaoEntity);
             }
